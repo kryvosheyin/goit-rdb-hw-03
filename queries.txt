@@ -1,0 +1,34 @@
+p1. 
+
+SELECT * FROM practice.products
+SELECT name, phone FROM practice.shippers
+
+
+p2. 
+
+SELECT AVG(price) as average_price, MIN(price) as lowest_price, MAX(price) as highest_price 
+FROM practice.products;
+
+
+p3. 
+
+SELECT DISTINCT category_id, price 
+FROM practice.products 
+ORDER BY price 
+DESC LIMIT 10
+
+
+p4. 
+
+SELECT COUNT(*) as products_count
+FROM practice.products
+WHERE price > 20 AND price <100
+
+
+p5. 
+
+SELECT supplier_id, COUNT(*) as products_amount, 
+AVG(price) as average_price
+FROM practice.products 
+GROUP BY supplier_id
+
